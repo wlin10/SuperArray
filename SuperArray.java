@@ -14,7 +14,12 @@ public class SuperArray {
 
   public boolean add(String element) {
     this.data[this.size] = element;
+    this.size += 1;
     return true;
+  }
+
+  public String get(int index) {
+    return (this.data[index]);
   }
 
 }
