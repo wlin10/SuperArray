@@ -39,4 +39,30 @@ public class SuperArray {
     }
   }
 
+  public boolean isEmpty() {
+    return (size == 0);
+  }
+
+  public void clear() {
+    size = 0;
+    data = new String[10];
+  }
+
+  public String toString() {
+    String ans = "[";
+    for (int i = 0; i < size - 1; i++) {
+      ans += (data[i] + ", ");
+    }
+    return (ans + data[size-1] + "]");
+  }
+
+  public boolean contains(String s) {
+    for (int i = 0; i < size; i++) {
+      if (s.equals(data[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
 }
