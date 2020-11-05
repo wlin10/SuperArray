@@ -68,5 +68,8 @@ public class Tester {
         System.out.println(letters.indexOf("m"));
         System.out.println(letters.indexOf("z"));
 
+        System.out.println(words.toArray());
+        System.out.println(letters.toArray());
+
     }
 }
