@@ -88,4 +88,20 @@ public class SuperArray {
     return ans;
   }
 
+  public int indexOf(String s) {
+    int ans = -1;
+    boolean first = false;
+    if (this.contains(s) == false) {
+      return ans;
+    } else {
+      for (int i = 0; i < size; i++) {
+        if (first == false && s.equals(data[i])) {
+          ans = i;
+          first = true;
+        }
+      }
+    }
+    return ans;
+  }
+
 }
