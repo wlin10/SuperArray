@@ -33,7 +33,7 @@ public class SuperArray {
 
   private void resize() {
     String[] temp = data;
-    data = new String[size + 10];
+    data = new String[size * 2];
     for (int i = 0; i < temp.length; i++) {
       data[i] = temp[i];
     }
@@ -75,6 +75,12 @@ public class SuperArray {
       data[i+1] = data[i];
     }
     data[index] = element;
+  }
+
+  public String remove(int index) {
+    String ans = data[index];
+    data[index] = null;
+    return ans;
   }
 
 }
