@@ -1,11 +1,11 @@
 public class Tester {
     public static void main(String[] args) {
-      SuperArray words = new SuperArray();
+      SuperArray words = new SuperArray(5);
         words.add("kani");
         words.add("uni");
         words.add("ebi");
         for(int i = 0; i < words.size(); i++){
-            System.out.println( words.get(i) );
+            System.out.println(words.get(i) );
         }
 
         System.out.println(words.toString());
@@ -40,14 +40,24 @@ public class Tester {
         for(int i = 0; i < letters.size(); i++){
             System.out.println(letters.get(i) );
         }
+        System.out.println(letters.toString());
 
+        System.out.println(words.size());
         System.out.println(words.isEmpty());
+
+        System.out.println(letters.size());
         System.out.println(letters.isEmpty());
 
         words.clear();
         System.out.println(words.isEmpty());
+        System.out.println(words.size());
         words.add("kani");
         System.out.println(words.toString());
+        System.out.println(words.size());
+
+        System.out.println(letters.contains("dog"));
+        System.out.println(letters.contains("d"));
+
 
     }
 }
