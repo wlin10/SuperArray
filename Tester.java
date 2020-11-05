@@ -61,5 +61,8 @@ public class Tester {
         letters.add(4, "5");
         System.out.println(letters.toString());
 
+        System.out.println(letters.remove(4));
+        System.out.println(letters.toString());
+
     }
 }
