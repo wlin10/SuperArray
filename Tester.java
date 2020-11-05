@@ -64,5 +64,9 @@ public class Tester {
         System.out.println(letters.remove(4));
         System.out.println(letters.toString());
 
+        System.out.println(letters.indexOf("g"));
+        System.out.println(letters.indexOf("m"));
+        System.out.println(letters.indexOf("z"));
+
     }
 }
