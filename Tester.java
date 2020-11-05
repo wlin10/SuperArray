@@ -58,6 +58,8 @@ public class Tester {
         System.out.println(letters.contains("dog"));
         System.out.println(letters.contains("d"));
 
+        letters.add(4, "5");
+        System.out.println(letters.toString());
 
     }
 }
