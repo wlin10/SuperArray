@@ -9,13 +9,36 @@ public class Demo{
   }
 
   public static SuperArray findOverlap(SuperArray a, SuperArray b) {
-    SuperArray ans = new SuperArray(a.size() + b.size());
+    SuperArray ans = new SuperArray();
     for (int i = 0; i < a.size(); i++) {
       if (b.contains(a.get(i))) {
         ans.add(a.get(i));
       }
     }
     removeDuplicates(ans);
+    return ans;
+  }
+
+  public static SuperArray zip(SuperArray a, SuperArray b) {
+    SuperArray ans = new SuperArray();
+    if (a.size() <= b.size()) {
+      for (int i = 0; i < a.size(); i++) {
+        ans.add(a.get(i));
+        ans.add(b.get(i));
+      }
+      for (int i = a.size(); i < b.size(); i++) {
+        ans.add(b.get(i));
+      }
+    }
+    if (a.size() > b.size()) {
+      for (int i = 0; i < b.size(); i++) {
+        ans.add(a.get(i));
+        ans.add(b.get(i));
+      }
+      for (int i = b.size(); i < a.size(); i++) {
+        ans.add(a.get(i));
+      }
+    }
     return ans;
   }
 
@@ -31,13 +54,15 @@ public class Demo{
     System.out.println(words);
 
     SuperArray a = new SuperArray();
-    a.add("9"); a.add("1"); a.add("2"); a.add("2");
-    a.add("3"); a.add("4");
+    a.add("a"); a.add("b"); a.add("c");
+    a.add("d"); a.add("e"); a.add("f");
     SuperArray b = new SuperArray();
-    b.add("0"); b.add("4"); b.add("2");
-    b.add("2"); b.add("9");
+    b.add("e"); b.add("f"); b.add("g");
+    b.add("h"); b.add("i"); b.add("j");
+    b.add("k"); b.add("l"); b.add("d");
 
     System.out.println(findOverlap(a,b));
+    System.out.println(zip(a,b));
 
     }
 }
