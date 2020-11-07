@@ -128,5 +128,14 @@ public class SuperArray {
     return ans;
   }
 
+  public boolean equals(SuperArray other) {
+    for (int i = 0; i < this.size; i++) {
+      if (this.data[i] != other.data[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
 
 }
