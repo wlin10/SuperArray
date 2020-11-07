@@ -61,5 +61,12 @@ public class Tester {
         System.out.println(words.indexOf("ebi"));
         System.out.println(words.lastIndexOf("ebi"));
 
+        SuperArray words2 = new SuperArray(20);
+        words2.add("kani"); words2.add("uni"); words2.add("ebi");
+        System.out.println(words.equals(words2));
+        words2.add("kani"); words2.add("uni"); words2.add("ebi");
+        words2.add("kani"); words2.add("uni"); words2.add("ebi");
+        System.out.println(words.equals(words2));
+
     }
 }
