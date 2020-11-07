@@ -112,4 +112,21 @@ public class SuperArray {
     return ans;
   }
 
+  public int lastIndexOf(String value) {
+    int ans = -1;
+    boolean last = false;
+    if (this.contains(value) == false) {
+      return ans;
+    } else {
+      for (int i = size - 1; i >= 0; i--) {
+        if (last == false && value.equals(data[i])) {
+          ans = i;
+          last = true;
+        }
+      }
+    }
+    return ans;
+  }
+
+
 }
