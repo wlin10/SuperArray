@@ -68,5 +68,14 @@ public class Tester {
         words2.add("kani"); words2.add("uni"); words2.add("ebi");
         System.out.println(words.equals(words2));
 
+        //SuperArray blank = new SuperArray(-4);
+        //words2.get(100);
+        //words2.get(-3);
+        //words2.set(100, "kani");
+        //words2.set(-3, "kani");
+        //words2.add(100, "kani");
+        //words2.add(-3, "kani");
+        //words2.remove(100);
+        //words2.remove(-3);
     }
 }
