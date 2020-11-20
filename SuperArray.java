@@ -83,6 +83,12 @@ public class SuperArray {
     if (index < 0 || index > size()) {
       throw new IndexOutOfBoundsException("index " + index + " is out of range");
     }
+    if (data.length == this.size()) {
+      this.resize();
+    }
+    if (size == 0) {
+      add(element);
+    } else {
     String temp = data[size-1];
     for (int i = size - 1; i > index - 1; i--) {
       data[i+1] = data[i];
@@ -90,6 +96,7 @@ public class SuperArray {
     add(temp);
     data[index] = element;
   }
+}
 
   public String remove(int index) {
     if (index < 0 || index >= size()) {
